@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Workbox Demo - DSC</title>
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    
+    <div>
+      <div class="navigation">
+        <ul class="nav-list">
+          <li class="nav-item">Home</li>
+          <li class="nav-item">About DSC</li>
+          <li class="nav-item">Join us</li>
+          <li class="nav-item">Core Team</li>
+          <li class="nav-item">Projects</li>
+        </ul>
+      </div>
+        <h1>Work Box Test</h1>
+        <img src="./assets/images/core-team.png" alt="core-team" height="350" width="100%">
+    </div>
+
+<script>
+// Check that service workers are supported
+if ('serviceWorker' in navigator) {
+    // Use the window load event to keep the page load performant
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  } else {
+    console.error('serviceWorker is not supported on browser ,some features would not be able to function')
+  }
+
+</script>
+<script src="./scripts/_apply.js"></script>
+<script src="./scripts/_arrayAggregator.js"></script>
+<script src="./scripts/_arrayEach.js"></script>
+</body>
+</html>
